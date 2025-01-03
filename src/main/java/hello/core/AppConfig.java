@@ -26,11 +26,11 @@ public class AppConfig {
     }
 
     public OrderService orderService(){
-        return new OrderServiceImpl(getMemoryMemberRepository(), new FixDiscountPolicy());
+        return new OrderServiceImpl(getMemoryMemberRepository(), discountPolicy());
     }
 
-//    public DiscountPolicy discountPolicy(){
-//        return new
-//    }
+    public DiscountPolicy discountPolicy(){
+        return new FixDiscountPolicy();
+    }
 
 }
