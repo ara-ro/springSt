@@ -19,10 +19,10 @@ class RateDiscountPolicyTest {
         Member member = new Member(1L, "memberVIP", Grade.VIP);
 
         // when
-        int disccount = discountPolicy.discount(member, 10000);
+        int disccount = discountPolicy.discount(member, 20000);
 
         // then
-        Assertions.assertEquals(disccount, 1000);
+        Assertions.assertEquals(disccount, 2000);
     }
 
     @Test
